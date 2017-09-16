@@ -14,40 +14,57 @@ namespace FuncionarioNivel
             this.horas = horas;
         }
 
-        public string GetNome()
+        public string Nome
         {
-            return nome;
-        }
-
-        public double GetHoras()
-        {
-            return horas;
-        }
-
-        public decimal GetValor()
-        {
-            decimal valor = 0;
-
-            switch (nivel)
+            get
             {
-                case 1: valor = 15; break;
-                case 2: valor = 18; break;
-                case 3: valor = 22; break;
-                case 4: valor = 27; break;
-                case 5: valor = 33; break;
+                return nome;
             }
-
-            return valor;
         }
 
-        public int GetNivel()
+        public double Horas
         {
-            return nivel;
+            get
+            {
+                return horas;
+            }
         }
 
-        public decimal GetSalario()
+        public decimal Valor
         {
-            return Convert.ToDecimal(horas) * GetValor();
+            get
+            {
+                decimal valor = 0;
+
+                switch (nivel)
+                {
+                    case 1: valor = 15; break;
+                    case 2: valor = 18; break;
+                    case 3: valor = 22; break;
+                    case 4: valor = 27; break;
+                    case 5: valor = 33; break;
+                }
+
+                return valor;
+            }
+        }
+
+        public int Nivel
+        {
+            get
+            {
+                return nivel;
+            }
+        }
+
+        public decimal Salario
+        {
+            get
+            {
+                {
+                    return Convert.ToDecimal(horas) * Valor;
+                }
+            }
         }
 
         public void Promover()

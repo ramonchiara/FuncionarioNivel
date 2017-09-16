@@ -21,14 +21,14 @@ namespace FuncionarioNivel
             Funcionario f = new Funcionario(nome, nivel, horas);
 
             Console.WriteLine("O funcionário {0} trabalhou {1} horas por R$ {2} (Nível {3}) e deve receber R$ {4}",
-                              f.GetNome(), f.GetHoras(), f.GetValor(), f.GetNivel(), f.GetSalario());
+                              f.Nome, f.Horas, f.Valor, f.Nivel, f.Salario);
 
             if (promocao.ToLower() == "s") // promocao == "s" || promocao == "S"
             {
                 f.Promover();
 
                 Console.WriteLine("O funcionário {0} teve promoção, trabalhou {1} horas por R$ {2} (Nível {3}) e o seu novo salário é de R$ {4}",
-                                  f.GetNome(), f.GetHoras(), f.GetValor(), f.GetNivel(), f.GetSalario());
+                                  f.Nome, f.Horas, f.Valor, f.Nivel, f.Salario);
             }
         }
     }
